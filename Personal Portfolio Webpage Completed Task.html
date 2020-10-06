@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+<title>Hybrid Media Personal Portfolio Webpage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<script src="https://kit.fontawesome.com/9607ff1b71.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FFA07A;
+  margin: 0px;
+  padding: 0px;
+}
+    h2 {
+  text-align: center;
+  padding-top: 20px;
+}
+    .central-section {
+  height: 100vh;
+}
+    #projects h2 {
+  margin-bottom: 30px;
+}
+    #projects-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 4vw;
+  grid-row-gap: 4vh;
+  max-width: 900px;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  justify-items: center;
+  align-items: center;
+}
+    #projects img {
+  width: 100%;
+  height: 100%;
+}
+    h1 {
+  margin-top: 35vh;
+  padding-top: 40px;
+}
+    #projects {
+  background-color: #5E001F;
+  padding-bottom: 20px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+    header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding-top: 10px;
+  z-index: 1;
+  background-color: #FFA07A; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+    #navbar {
+  margin-right: 20px;
+}
+    #navbar a {
+  margin: 2vw;
+  text-decoration: inherit;
+  color: #800000;
+}
+    #welcome-section {
+  min-height: 100px;
+  text-align: center;
+}
+    #projects-content a {
+  display: grid;
+  grid-template-rows: 1fr 35px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  border-style: solid;
+  width: 300px;
+  height: 210px;
+  text-decoration: none;
+  color: black;
+  border-width: 2px;
+  border-style: outset;
+  border-color: hsl(var(--theme-color, 100), 0%, 20%);
+  background-color: hsl(var(--theme-color, 100), 0%, 95%);
+}
+    #see-all {
+  border: solid;
+  border-width: 1px;
+  border-radius: 15px;
+  text-decoration: none;
+  padding: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 25px;
+  text-align: center;
+  color: black;
+  border-color: hsl(var(--theme-color, 100), 50%, 72%);
+  background-color: hsl(var(--theme-color, 100), 0%, 95%);
+}
+
+#see-all:hover {
+  animation-name: see-all-bg;
+  animation-duration: 600ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+    @keyframes see-all-bg {
+  50% {
+    background-color: hsl(var(--theme-color, 100), 90%, 80%);
+    transform: scale(1.05);
+  }
+  100% {
+    background-color: hsl(var(--theme-color, 100), 50%, 87%);
+    transform: scale(1.1);
+  }
+}
+    #contact-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 280px;
+}
+    #contact-us h2 {
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+#contact-us p {
+  margin-bottom: 30px;
+}
+
+#contacts-content {
+    margin: 25px 0;
+    padding: 5px 0;
+}
+
+.contacts-socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+.socials-items >
+a {
+    font-size: 20pt;
+    font-family: "Oswald";
+    font-weight: 500;
+    letter-spacing: 0pt;
+    margin: 0px 15px;
+    color: black;
+}
+    header, .central-section, footer {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+footer {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: hsl(var(--theme-color, 100), 50%, 82%);
+}
+    #client-list {
+  background-color: #5E001F;
+  padding-bottom: 20px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+
+#client-list h2 {
+  margin-bottom: 30px;
+}
+
+#clients-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 6vw;
+  grid-row-gap: 6vh;
+  max-width: 900px;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  justify-items: center;
+  align-items: center;
+}
+
+#client-list img {
+  width: 100%;
+  height: 100%;
+}
+
+#clients-content h3 {
+  display: grid;
+  grid-template-rows: 1fr 35px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  border-style: solid;
+  width: 300px;
+  height: 210px;
+  text-decoration: none;
+  color: black;
+  border-width: 2px;
+  border-style: outset;
+  border-color: hsl(var(--theme-color, 100), 0%, 20%);
+  background-color: hsl(var(--theme-color, 100), 0%, 95%);
+}
+    @media(max-width: 700px) {
+  #projects-content a {
+    width: 240px;
+    height: 168px;
+  }
+  #clients-content h3 {
+    width: 240px;
+    height: 168px;
+  }
+}
+    @media(max-width: 650px) {
+  #contact-us {
+    min-height: 390px;
+  }
+}
+    @media(max-width: 570px) {
+  #projects-content {
+    grid-template-columns: 1fr;
+  }
+  #clients-content {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav id="navbar">
+      <a href="#welcome-section" class="nav-link">About Us</a>
+      <a href="#projects" class="nav-link">Our Portfolio</a>
+      <a href="#contact-us" class="nav-link">Contact Us</a>
+      <a href="#client-list" class="nav-link">Our Clients</a>
+    </nav>
+  </header>
+      <main>
+    <section id="welcome-section" class="central-section">
+      <h1>I am Collins Okwologu.</h1>
+      <p>The Senior Front End Developer at Hybrid Media Concept. We are a Tech and Software Development company based in Lagos, Nigeria. Our services include, but not limited to; Website Design, Graphic Design, Cloud Computing and Website Hosting & Domain.</p>
+    </section>
+    <section id="projects" class="central-section">
+      <h2>Here are some of our projects and past works.</h2>
+      <div id="projects-content">
+      <a href="https://codepen.io/COkwologu/pen/ZEWqvWa" class="project-tile"><img src="https://i.imgur.com/W0QWI5Z.png" alt="technical documentation page preview">Technical Documentation page</a>
+      <a href="https://codepen.io/COkwologu/pen/JjXvvYY" class="project-tile"><img src="https://i.imgur.com/QJY8ybK.png" alt="tribute page preview">Tribute page</a>
+      <a href="https://codepen.io/COkwologu/pen/qBZKJLY" class="project-tile"><img src="https://i.imgur.com/gwB61S1.png" alt="product landing preview">Product Landing page</a>
+      <a href="https://codepen.io/COkwologu/pen/OJNEMLj" class="project-tile"><img src="https://i.imgur.com/3W4Gm59.png" alt="survey form preview">Survey Form page</a>
+      </div>
+      <a href="https://codepen.io/your-work/" target="_blank" id="see-all">SEE ALL</a>
+    </section>
+    <section id="contact-us" class="central-section">
+      <h2>We'd love to hear from you.</h2>
+      <p>Which of our services interests you the most?</p>
+      <div id="contacts-content">
+                <ul class="contacts-socials">
+                    <li class="socials-items">
+                        <div id="linkedIn"><a href="https://www.linkedin.com/in/collins-okwologu-a80955b1/" target="_blank"><span class="socials-logos"><i class="fab fa-linkedin"></i>&nbsp;LinkedIn</span></a></div>
+                    </li>
+                    <li class="socials-items">
+                        <div id="github"><a href="https://github.com/Collins975-ux" target="_blank" id="profile-link"><span class="socials-logos"><i class="fab fa-github"></i>&nbsp;GitHub</span></a></div>
+                    </li>
+                    <li class="socials-items">
+                        <div id="twitter"><a href="https://twitter.com/Okwologu_" target="_blank"><span class="socials-logos"><i class="fab fa-twitter"></i>&nbsp;Twitter</span></a></div>
+                    </li>
+                    <li class="socials-items">
+                        <div id="email"><a href="mailto:collinsokwologu975@gmail.com" target="_blank"><span class="socials-logos"><i class="fas fa-envelope"></i>&nbsp;Send us a mail</span></a></div>
+                    </li>
+                    <li class="socials-items">
+                        <div id="tel"><a href="tel:0706-3809-035" target="_blank"><span class="socials-logos"><i class="fas fa-phone-square"></i>&nbsp;Call us</span></a></div>
+                    </li>
+                </ul>
+            </div>
+    </section>
+   <section id="client-list" class="central-section">
+      <h2>Have a look at some of our clients.</h2>
+      <p>We did a fantastic job with these companies below. You can be the next client in line, to enjoy these benefits too.</p>
+      <div id="clients-content">
+      <h3 class="client-tile"><img src="https://i.imgur.com/iBoLsX2.png" alt="paystack">Paystack</h3>
+      <h3 class="client-tile"><img src="https://i.imgur.com/bLfZ8uv.jpg" alt="flutterwave">Flutterwave</h3>
+      <h3 class="client-tile"><img src="https://i.imgur.com/gpBzL3w.png" alt="gtpay">GTPay</h3>
+      <h3 class="client-tile"><img src="https://i.imgur.com/Vo8jqZa.png" alt="interswitch webpay">Interswitch Webpay</h3>
+      <h3 class="client-tile"><img src="https://i.imgur.com/ZwwzGfc.jpg" alt="ettranzact">eTtranzact</h3>
+      <h3 class="client-tile"><img src="https://i.imgur.com/GbmfVHU.jpg" alt="u-collect">U-Collect</h3>
+      </div>
+    </section>
+</main>
+<footer>
+    <p>© Created for Hybrid Media Concept</p>
+    <p><em>**This portfolio webpage and the contents contained therein are only meant for educational purpose. It should never be seen as a legit webpage.</em></p>
+  </footer>
+</body>
